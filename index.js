@@ -14,10 +14,13 @@ const app = {};
 //     console.log('Data=> ', JSON.parse(dataAsParameter), 'Error=>', err);
 // });
 
-data.update('test', 'newFile', { name: 'England', language: 'English' }, (err) => {
+// data.update('test', 'newFile', { name: 'England', language: 'English' }, (err) => {
+//     console.log('error was', err);
+// });
+data.delete('test', 'newFile', (err) => {
     console.log('error was', err);
 });
-// create server
+//  create server
 app.createServer = () => {
     console.log(environment);
     const server = http.createServer(app.handleReqRes);
