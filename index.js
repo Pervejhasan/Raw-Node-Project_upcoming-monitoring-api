@@ -10,8 +10,12 @@ const app = {};
 // data.create('test', 'newFile', { name: 'Bangladesh', language: 'Bangla' }, (err) => {
 //     console.log('error was', err);
 // });
-data.read('test', 'newFile', (err, dataAsParameter) => {
-    console.log('Data=> ', JSON.parse(dataAsParameter), 'Error=>', err);
+// data.read('test', 'newFile', (err, dataAsParameter) => {
+//     console.log('Data=> ', JSON.parse(dataAsParameter), 'Error=>', err);
+// });
+
+data.update('test', 'newFile', { name: 'England', language: 'English' }, (err) => {
+    console.log('error was', err);
 });
 // create server
 app.createServer = () => {
